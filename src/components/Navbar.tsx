@@ -73,7 +73,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden absolute top-full inset-x-0 bg-background border-b border-white/10 shadow-xl overflow-hidden"
+            className="md:hidden absolute top-full inset-x-0 bg-background border-b border-border shadow-xl overflow-hidden"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {links.map((l) => (
@@ -81,12 +81,12 @@ const Navbar = () => {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-semibold text-white/80 hover:text-white transition-colors duration-200"
+                  className="text-lg font-semibold text-gray-800 hover:text-primary transition-colors duration-200"
                 >
                   {l.label}
                 </a>
               ))}
-              <hr className="border-white/10" />
+              <hr className="border-border" />
               <div className="flex flex-col gap-3">
                 <Button size="lg" className="w-full h-14 gap-3 justify-center rounded-xl bg-primary text-white hover:bg-primary/90 transition-all duration-200" asChild>
                   <a href="tel:0234567891">
