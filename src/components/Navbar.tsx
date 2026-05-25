@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, MessageSquare, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
+
 const links = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
@@ -32,7 +33,7 @@ const Navbar = () => {
           <span className="font-display text-2xl tracking-tight text-primary leading-none font-black">
             SureLock
           </span>
-          <span className="font-sans text-xs font-black tracking-[0.2em] text-secondary uppercase leading-none mt-1">
+          <span className="font-sans text-xs font-black tracking-[0.2em] text-white/70 uppercase leading-none mt-1">
             SECURITY
           </span>
         </a>
@@ -42,7 +43,7 @@ const Navbar = () => {
             <a
               key={l.label}
               href={l.href}
-              className="text-[13px] font-bold tracking-wide uppercase text-text hover:text-primary transition-colors duration-200"
+              className="text-[13px] font-bold tracking-wide uppercase text-white/80 hover:text-white transition-colors duration-200"
             >
               {l.label}
             </a>
@@ -58,7 +59,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-secondary p-2"
+          className="md:hidden text-white/80 hover:text-white p-2 transition-colors duration-200"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -72,7 +73,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden absolute top-full inset-x-0 bg-background border-b border-border shadow-xl overflow-hidden"
+            className="md:hidden absolute top-full inset-x-0 bg-background border-b border-white/10 shadow-xl overflow-hidden"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {links.map((l) => (
@@ -80,12 +81,12 @@ const Navbar = () => {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-semibold text-secondary hover:text-primary transition-colors duration-200"
+                  className="text-lg font-semibold text-white/80 hover:text-white transition-colors duration-200"
                 >
                   {l.label}
                 </a>
               ))}
-              <hr className="border-border" />
+              <hr className="border-white/10" />
               <div className="flex flex-col gap-3">
                 <Button size="lg" className="w-full h-14 gap-3 justify-center rounded-xl bg-primary text-white hover:bg-primary/90 transition-all duration-200" asChild>
                   <a href="tel:0234567891">
